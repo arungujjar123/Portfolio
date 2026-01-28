@@ -1,0 +1,102 @@
+.courses-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.course-section {
+  margin-bottom: 30px;
+}
+
+.section-title {
+  background-color: #e6f0ff;
+  color: #4169E1;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 0;
+  border: 2px solid #333;
+  border-bottom: none;
+}
+
+.section-title-table {
+  background-color: #e6f0ff;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 12px 20px;
+  margin: 0;
+  text-align: center;
+  border: 2px solid #333;
+  border-bottom: 1px solid #333;
+}
+
+.course-list-box {
+  border: 2px solid #333;
+  background-color: white;
+  padding: 0;
+}
+
+.course-item {
+  padding: 12px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: 10px;
+}
+
+.course-item:last-child {
+  border-bottom: none;
+}
+
+.course-num {
+  color: #333;
+  font-size: 16px;
+  min-width: 25px;
+}
+
+.course-link {
+  color: #4169E1;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.course-link:hover {
+  text-decoration: underline;
+}
+
+.courses-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid #333;
+  border-top: none;
+  background-color: white;
+}
+
+.courses-table tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.courses-table tr:last-child {
+  border-bottom: none;
+}
+
+.date-column {
+  width: 150px;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #333;
+  border-right: 1px solid #ddd;
+}
+
+.course-column {
+  padding: 12px 20px;
+}
+
+.course-column .course-link {
+  color: #4169E1;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.course-column .course-link:hover {
+  text-decoration: underline;
+}

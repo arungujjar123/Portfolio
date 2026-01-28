@@ -1,0 +1,53 @@
+.resources-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.resource-section {
+  margin-bottom: 30px;
+}
+
+.section-number {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.resource-box {
+  background-color: #f5f0e5;
+  border: 1px solid #d4c5a9;
+  border-radius: 8px;
+  padding: 20px 30px;
+}
+
+.resource-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.resource-list li {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #333;
+}
+
+.resource-list li:last-child {
+  margin-bottom: 0;
+}
+
+.resource-list a {
+  color: #4169E1;
+  text-decoration: none;
+}
+
+.resource-list a:hover {
+  text-decoration: underline;
+}
+
+.resource-list strong {
+  font-weight: 600;
+  color: #000;
+}

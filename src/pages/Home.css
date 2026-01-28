@@ -1,0 +1,224 @@
+.home-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.workshop-notice {
+  text-align: right;
+  font-size: 14px;
+  margin-bottom: 25px;
+  color: #666;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.welcome-section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #667eea;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.welcome-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-section h1 {
+  font-size: 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.intro-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: #555;
+}
+
+.intro-text a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.intro-text a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  transition: width 0.3s ease;
+}
+
+.intro-text a:hover {
+  color: #764ba2;
+}
+
+.intro-text a:hover::after {
+  width: 100%;
+}
+
+.research-section {
+  margin-bottom: 40px;
+  background: white;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border-left: 5px solid #f093fb;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.research-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.research-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 15px;
+}
+
+.research-section p {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.explore-text {
+  font-style: italic;
+  color: #764ba2;
+  font-weight: 500;
+}
+
+.courses-section {
+  margin-top: 40px;
+}
+
+.course-block {
+  background: white;
+  border-radius: 15px;
+  margin-bottom: 35px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course-block:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.25);
+}
+
+.course-heading {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 20px 30px;
+  margin: 0;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.course-table tr {
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.course-table tr:hover {
+  background-color: #f8f9ff;
+}
+
+.course-table tr:last-child {
+  border-bottom: none;
+}
+
+.course-number {
+  width: 60px;
+  padding: 20px 30px;
+  font-size: 16px;
+  color: #888;
+  font-weight: 600;
+}
+
+.course-name {
+  padding: 20px 30px;
+  font-size: 17px;
+}
+
+.course-name a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.3s ease;
+  display: inline-block;
+}
+
+.course-name a::before {
+  content: '→';
+  margin-right: 10px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
+}
+
+.course-name a:hover::before {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.course-name a:hover {
+  color: #764ba2;
+  padding-left: 5px;
+}
