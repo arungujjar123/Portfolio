@@ -143,3 +143,90 @@
 .cv-button:active {
   transform: translateY(0);
 }
+
+/* Admin Edit Styles for Sidebar */
+.profile-image-container {
+  position: relative;
+}
+
+.image-edit-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 0 0 50% 50%;
+}
+
+.profile-image-container:hover .image-edit-controls {
+  opacity: 1;
+}
+
+.image-upload-btn {
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 8px;
+  transition: all 0.3s;
+}
+
+.image-upload-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(102, 126, 234, 0.5);
+}
+
+.image-url-option {
+  margin-top: 5px;
+}
+
+.image-url-input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 11px;
+  background: white;
+}
+
+.image-url-input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.website-link-edit,
+.cv-button-edit {
+  margin-top: 15px;
+}
+
+/* Make editable fields work better in sidebar */
+.sidebar .editable-field {
+  width: 100%;
+  display: block;
+}
+
+.sidebar .field-value {
+  word-break: break-word;
+}
+
+.sidebar .edit-btn {
+  font-size: 11px;
+  padding: 3px 8px;
+}
+
+.contact-item .editable-field {
+  flex: 1;
+  display: inline-flex;
+}
+
+.contact-item .editable-field .field-value {
+  color: #333;
+}

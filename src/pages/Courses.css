@@ -100,3 +100,53 @@
 .course-column .course-link:hover {
   text-decoration: underline;
 }
+
+/* Admin Controls for Courses */
+.admin-add-btn {
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 0;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  border-top: 1px solid #ddd;
+}
+
+.admin-add-btn:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: scale(1.02);
+}
+
+.admin-delete-btn {
+  background: #f44336;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  flex-shrink: 0;
+  transition: all 0.2s;
+}
+
+.admin-delete-btn:hover {
+  background: #da190b;
+  transform: scale(1.1);
+}
+
+.course-item .editable-field,
+.date-column .editable-field,
+.course-column .editable-field {
+  width: 100%;
+}
