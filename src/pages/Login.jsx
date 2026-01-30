@@ -60,16 +60,6 @@ function Login() {
               Login
             </button>
           </form>
-
-          <div className="login-info">
-            <p>Default credentials for demo:</p>
-            <p>
-              <strong>Username:</strong> admin
-            </p>
-            <p>
-              <strong>Password:</strong> admin123
-            </p>
-          </div>
         </div>
       </div>
     </div>

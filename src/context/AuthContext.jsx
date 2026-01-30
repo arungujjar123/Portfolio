@@ -14,10 +14,10 @@ export const AuthProvider = ({ children }) => {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Default admin credentials (in production, use backend authentication)
+  // Admin credentials from environment variables
   const ADMIN_CREDENTIALS = {
-    username: "admin",
-    password: "admin123",
+    username: import.meta.env.VITE_ADMIN_USERNAME,
+    password: import.meta.env.VITE_ADMIN_PASSWORD,
   };
 
   useEffect(() => {
