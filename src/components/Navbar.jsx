@@ -1,11 +1,8 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
+import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
   const location = useLocation();
-  const navigate = useNavigate();
-  const { isAdmin, logout } = useAuth();
 
   const navItems = [
     { path: "/", label: "Home" },
@@ -13,11 +10,6 @@ function Navbar() {
     { path: "/experience", label: "Experience" },
     { path: "/publications", label: "Publications" },
   ];
-
-  const handleLogout = () => {
-    logout();
-    navigate("/");
-  };
 
   return (
     <nav className="navbar">
@@ -31,20 +23,6 @@ function Navbar() {
             {item.label}
           </Link>
         ))}
-      </div>
-      <div className="admin-controls">
-        {isAdmin ? (
-          <>
-            <span className="admin-badge">Admin Mode</span>
-            <button onClick={handleLogout} className="logout-btn">
-              Logout
-            </button>
-          </>
-        ) : (
-          <Link to="/login" className="login-link">
-            Admin Login
-          </Link>
-        )}
       </div>
     </nav>
   );
