@@ -1,10 +1,11 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
-import Courses from "./pages/Courses";
-import Experience from "./pages/Experience";
 import Publications from "./pages/Publications";
+import Team from "./pages/Team";
+import Resources from "./pages/Resources";
+import Activities from "./pages/Activities";
+import Recognitions from "./pages/Recognitions";
 import "./App.css";
 
 function App() {
@@ -13,18 +14,19 @@ function App() {
       <div className="app">
         <Navbar />
         <div className="content-wrapper">
-          <Sidebar />
           <main className="main-content">
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/courses" element={<Courses />} />
-              <Route path="/experience" element={<Experience />} />
               <Route path="/publications" element={<Publications />} />
+              <Route path="/activities" element={<Activities />} />
+              <Route path="/research-group" element={<Team />} />
+              <Route path="/recognitions" element={<Recognitions />} />
+              <Route path="/resources" element={<Resources />} />
             </Routes>
           </main>
         </div>
         <footer className="footer">
-          <p>CSE IIITS</p>
+          <p>Research Group | CSE IIITS</p>
         </footer>
       </div>
     </Router>
