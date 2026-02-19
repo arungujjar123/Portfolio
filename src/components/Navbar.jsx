@@ -6,9 +6,11 @@ function Navbar() {
 
   const navItems = [
     { path: "/", label: "Home" },
-    { path: "/courses", label: "Courses" },
-    { path: "/experience", label: "Experience" },
     { path: "/publications", label: "Publications" },
+    { path: "/activities", label: "Activities" },
+    { path: "/research-group", label: "Research Group" },
+    { path: "/recognitions", label: "Recognitions" },
+    { path: "/resources", label: "Resources" },
   ];
 
   return (

@@ -5,29 +5,17 @@ import "./Home.css";
 
 function Home() {
   const [profile, setProfile] = useState(null);
-  const [springCourses, setSpringCourses] = useState([]);
-  const [pastCourses, setPastCourses] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [profileDoc, spring, pastList] = await Promise.all([
-          client.fetch(
-            '*[_type == "profile"][0]{name,title,profileImage,location,department,state,email1,email2,websiteLink,cvText,welcomeText,bio,researchAreas}'
-          ),
-          client.fetch(
-            '*[_type == "course" && semester == "spring-2026"]|order(order asc){_id,name,order}'
-          ),
-          client.fetch(
-            '*[_type == "course" && semester == "past-list"]|order(order asc){_id,name,order}'
-          ),
-        ]);
+        const profileDoc = await client.fetch(
+          '*[_type == "profile"][0]{heroImage,welcomeText,researchAreas}',
+        );
 
         setProfile(profileDoc || null);
-        setSpringCourses(spring || []);
-        setPastCourses(pastList || []);
       } catch (err) {
         setError("Unable to load home content. Please try again.");
         console.error(err);
@@ -39,8 +27,8 @@ function Home() {
     fetchData();
   }, []);
 
-  const profileImageUrl = profile?.profileImage
-    ? urlFor(profile.profileImage).width(400).height(400).url()
+  const heroImageUrl = profile?.heroImage
+    ? urlFor(profile.heroImage).width(1400).height(500).url()
     : null;
 
   return (
@@ -53,56 +41,33 @@ function Home() {
           {profile?.welcomeText ||
             "A warm and hearty welcome to fellow researchers, students and enthusiasts"}
         </h1>
-        <p className="intro-text">
-          {profile?.bio ||
-            "Profile information will appear here once added in Sanity Studio."}
-        </p>
-        {profileImageUrl && (
-          <div className="profile-image-wrapper">
-            <img src={profileImageUrl} alt={profile?.name || "Profile"} />
-          </div>
-        )}
       </section>
 
       <section className="research-section">
         <h2>Research Area(s):</h2>
-        <p>{profile?.researchAreas || "Add research areas in Sanity Studio."}</p>
-        <p className="explore-text">Explore my courses, research, and presentations.</p>
+        <p>
+          {profile?.researchAreas || "Add research areas in Sanity Studio."}
+        </p>
+        <p className="explore-text">
+          Explore our research, publications, and activities.
+        </p>
       </section>
 
-      <section className="courses-section">
-        <div className="course-block">
-          <h2 className="course-heading">Spring-2026 Course</h2>
-          <table className="course-table">
-            <tbody>
-              {springCourses.map((course, index) => (
-                <tr key={course._id || course.id}>
-                  <td className="course-number">{index + 1}</td>
-                  <td className="course-name">
-                    <span>{course.name}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <div className="course-block">
-          <h2 className="course-heading">Past Courses</h2>
-          <table className="course-table">
-            <tbody>
-              {pastCourses.map((course, index) => (
-                <tr key={course._id || course.id}>
-                  <td className="course-number">{index + 1}.</td>
-                  <td className="course-name">
-                    <span>{course.name}</span>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </section>
+      {/* Hero Image Section */}
+      {heroImageUrl && (
+        <section className="hero-section">
+          <div className="hero-image-container">
+            <img
+              src={heroImageUrl}
+              alt="Research highlights"
+              className="hero-image"
+            />
+            <div className="hero-overlay">
+              <p className="hero-caption">Research in Action</p>
+            </div>
+          </div>
+        </section>
+      )}
     </div>
   );
 }

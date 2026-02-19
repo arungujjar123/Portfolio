@@ -10,14 +10,29 @@
   flex: 1;
   margin-top: 60px;
   width: 100%;
+  justify-content: center;
 }
 
 .main-content {
   flex: 1;
-  padding: 50px;
+  max-width: 1400px;
+  width: 100%;
+  padding: 50px 80px;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   overflow-y: auto;
   min-height: calc(100vh - 60px);
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 40px 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 30px 20px;
+  }
 }
 
 .footer {
